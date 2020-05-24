@@ -44,7 +44,6 @@ const serveWeb = req => {
   const n = url.lastIndexOf('.')
   if (url.indexOf('..') === -1 && n >= 0) {
     const ext = url.substring(n + 1)
-    console.log(url, ext)
     const path = 'docs' + url
     const body = fs.readFileSync(path)
     if (body) {

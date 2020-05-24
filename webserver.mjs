@@ -1,5 +1,20 @@
-import { serve } from "https://deno.land/std@0.50.0/http/server.ts"
-import fs from './fs.mjs'
+/*
+// webserver module for Deno
+
+- how to use
+// provide under docs folder as web
+
+import { serve } from 'https://deno.land/std@0.50.0/http/server.ts'
+import { serveWeb } from 'https://taisukef.github.io/denolib/webserver.mjs'
+
+const PORT = 80
+const server = serve({ port: PORT })
+for await (const req of server) {
+  serveWeb(req)
+}
+*/
+
+import fs from 'https://taisukef.github.io/denolib/fs.mjs'
 
 const CONTENT_TYPE = {
   html: 'text/html; charset=utf-8',
@@ -18,10 +33,13 @@ const CONTENT_TYPE = {
 }
 
 const serveWeb = req => {
-  const url = req.url
+  let url = req.url
   if (url === '/favicon.ico') {
     req.respond({ body: '' })
     return
+  }
+  if (url === '/') {
+    url = '/index.html'
   }
   const n = url.lastIndexOf('.')
   if (url.indexOf('..') === -1 && n >= 0) {
@@ -38,14 +56,5 @@ const serveWeb = req => {
   }
   req.respond({ body: '' })
 }
-
-/*
-const PORT = 8007
-const server = serve({ port: PORT })
-console.log(`web started on port ${PORT}`)
-for await (const req of server) {
-  serveWeb(req)
-}
-*/
 
 export { serveWeb }

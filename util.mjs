@@ -472,6 +472,7 @@ exports.JAPAN_PREF_EN = [ "Hokkaido", "Aomori", "Iwate", "Miyagi", "Akita", "Yam
 const main = async function() {
   
 }
+/*
 if (Deno.execPath() === 'util.mjs') {
   main()
   /*

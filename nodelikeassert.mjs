@@ -36,7 +36,7 @@ const expect = test => {
     deep: {
       equal: chk => {
         if (!asyncflg) {
-          denoassert(test, chk);
+          denoassert(Object.is(test. chk));
         } else {
           if (!Object.is(test. chk)) {
             throw new Error(test + " is not " + chk);
@@ -53,10 +53,11 @@ const expect = test => {
         } catch (e) {
         }
         denoassert(true);
+        return res;
       },
       equal: chk => {
         if (!asyncflg) {
-          denoassert(test, chk);
+          denoassert(test === chk);
         } else {
           if (test !== chk) { // !Object.is(test. chk)) {
             throw new Error(test + " != " + chk);
@@ -80,6 +81,7 @@ const expect = test => {
           } catch (e) {
           }
           denoassert(false);
+          return res;
         }
       }
     }

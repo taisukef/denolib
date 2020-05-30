@@ -13,7 +13,7 @@
   </defs>
   <g fill="none" fill-rule="evenodd">
     <g font-family="&#39;DejaVu Sans&#39;,Verdana,Geneva,sans-serif" font-size="11">
-      <path id="workflow-bg" d="M0,3 C0,1.3431 1.3552,0 3.02702703,0 H20 L20,20 L3.02702703,20 C1.3552,20 0,18.6569 0,17 L0,3 Z" fill="url(#workflow-fill)" fill-rule="nonzero"></path>-->
+      <path id="workflow-bg" d="M0,3 C0,1.3431 1.3552,0 3.02702703,0 H20 L20,20 L3.02702703,20 C1.3552,20 0,18.6569 0,17 L0,3 Z" fill="url(#workflow-fill)" fill-rule="nonzero"></path>
       <!--<path id="workflow-bg" d="M0,3 C0,1.3431 1.3552,0 3.02702703,0 h88.94594594 c0,1.657 1.3552,-3 3.02702703,3 L95,20 L92,20 L3.02702703,20 C1.3552,20 0,18.6569 0,17 L0,3 Z" fill="url(#workflow-fill)" fill-rule="nonzero"></path>-->
     </g>
     <g transform="translate(19)" font-family="&#39;DejaVu Sans&#39;,Verdana,Geneva,sans-serif" font-size="11">

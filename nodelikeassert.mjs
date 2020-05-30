@@ -69,8 +69,49 @@ const expect = test => {
         lengthOf: n => {
           denoassert(test.length === n);
           return res;
+        },
+        members: mem => {
+          if (typeof test !== "object") {
+            denoassert(false);
+            return;
+          }
+          for (const name of test) {
+            if (mem.indexOf(name) === -1) {
+              denoassert(false);
+              return;
+            }
+          }
+          denoassert(true);
+        },
+        property: (p1, p2) => {
+          if (p2) {
+            denoassert(test[p1] === p2)
+          } else {
+            denoassert(test[p1] != null)
+          }
+        },
+      },
+      be: {
+        an: s => {
+          if (s === "array") {
+            denoassert(Array.isArray(test));
+            return;
+          } else if (s === "object") {
+            denoassert(typeof test === "object");
+            return;
+          }
+          throw new Error("unsupported type " + s);
+          denoassert(false);
+        },
+        at: {
+          least: n => {
+            denoassert(test >= n);
+          }
+        },
+        true: () => {
+          denoassert(test === true);
         }
-      }
+      },
     },
     not: {
       to: {

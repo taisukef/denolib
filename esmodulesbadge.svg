@@ -9,10 +9,10 @@
     <g font-family="&#39;DejaVu Sans&#39;,Verdana,Geneva,sans-serif" font-size="11">
       <path id="workflow-bg" d="M0,3 C0,1.3431 1.3552,0 3.02702703,0 H20 L20,20 L3.02702703,20 C1.3552,20 0,18.6569 0,17 L0,3 Z M3 0 h67.47 C71.869 0 73 1.343 73 3v14c0 1.657-1.132 3-2.53 3H3V0z" fill="url(#workflow-fill)" fill-rule="nonzero"></path>
       <text fill="#010101" fill-opacity=".3">
-        <tspan x="4" y="15">ES6 module</tspan>
+        <tspan x="4" y="15">ES modules</tspan>
       </text>
       <text fill="#FFFFFF">
-        <tspan x="4" y="14">ES6 module</tspan>
+        <tspan x="4" y="14">ES modules</tspan>
       </text>
     </g>
   </g>

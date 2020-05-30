@@ -7,7 +7,7 @@ const commandLineArgs = function (opt) {
     }
     for (let i = 0; i < Deno.args.length; i++) {
       const arg = Deno.args[i];
-      if (arg === "--" + o.name || arg === "-" + o.alias) {
+      if (arg === "--" + o.name || arg === "-" + o.alias || o.defaultOption) {
         if (o.type === Boolean) {
           options[o.name] = true;
         } else if (o.type === String) {

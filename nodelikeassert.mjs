@@ -33,6 +33,16 @@ const expect = test => {
         } catch (e) {
         }
         denoassert(true);
+      },
+      equal: chk => {
+        denoassert(test, chk);
+        return res;
+      },
+      have: {
+        lengthOf: n => {
+          denoassert(test.length === n);
+          return res;
+        }
       }
     },
     not: {

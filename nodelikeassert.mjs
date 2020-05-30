@@ -21,29 +21,29 @@ const expect = test => {
   const res = {
     deep: {
       equal: chk => {
-        assert(test, chk);
+        denoassert(test, chk);
         return res;
       }
     },
     to: {
       throw: () => {
         try {
-          assert(false);
+          denoassert(false);
           return;
         } catch (e) {
         }
-        assert(true);
+        denoassert(true);
       }
     },
     not: {
       to: {
         throw: () => {
           try {
-            assert(true);
+            denoassert(true);
             return;
           } catch (e) {
           }
-          assert(false);
+          denoassert(false);
         }
       }
     }

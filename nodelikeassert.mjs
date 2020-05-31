@@ -36,7 +36,11 @@ const expect = test => {
     deep: {
       equal: chk => {
         if (!asyncflg) {
-          denoassert(Object.is(test. chk));
+          if (test == null || chk == null) {
+            denoassert(test == null && chk == null);
+          } else {
+            denoassert(Object.is(test. chk));
+          }
         } else {
           if (!Object.is(test. chk)) {
             throw new Error(test + " is not " + chk);

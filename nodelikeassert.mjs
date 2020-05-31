@@ -31,6 +31,23 @@ const before = f => beforefunc = f;
 let afterfunc = null;
 const after = f => afterfunc = f;
 
+const deepEquals = function (x, y) {
+  if (x === y) { return true; };
+  if (!(x instanceof Object) || !(y instanceof Object)) { return false; }
+  if (x.constructor !== y.constructor) { return false; }
+  for (const p in x) {
+    if (!x.hasOwnProperty(p)) { continue; }
+    if (!y.hasOwnProperty(p)) { return false; }
+    if (x[p] === y[p]) { continue; }
+    if (typeof(x[p]) !== "object") { return false; }
+    if (!deepEquals(x[p], y[p])) { return false; }
+  }
+  for (const p in y) {
+    if (y.hasOwnProperty(p) && !x.hasOwnProperty(p)) { return false; }
+  }
+  return true;
+};
+
 const expect = test => {
   const res = {
     deep: {
@@ -42,7 +59,7 @@ const expect = test => {
             denoassert(Object.is(test. chk));
           }
         } else {
-          if (!Object.is(test. chk)) {
+          if (!deepEquals(test, chk)) {
             throw new Error(test + " is not " + chk);
           }
         }

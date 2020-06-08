@@ -1,4 +1,5 @@
-import { assert as denoassert, assertStrictEq } from "https://deno.land/std/testing/asserts.ts";
+import { assert as denoassert, assertStrictEquals } from "https://deno.land/std/testing/asserts.ts";
+// import { assert as denoassert, assertStrictEq } from "https://deno.land/std/testing/asserts.ts"; // old
 
 const describe = (name, testfunc) => {
   console.log('test start: ', name);
@@ -6,9 +7,9 @@ const describe = (name, testfunc) => {
 }
 
 const assert = {
-  strictEqual: assertStrictEq,
+  strictEqual: assertStrictEquals,
   ok: denoassert,
-  deepEqual: assertStrictEq,
+  deepEqual: assertStrictEquals,
 };
 
 function isAsync(func) {

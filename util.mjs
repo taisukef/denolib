@@ -475,14 +475,13 @@ const main = async function() {
 /*
 if (Deno.execPath() === 'util.mjs') {
   main()
-  /*
   const test = [ [ '"abc"', '"', '""', '"""', 'a""b' ] ]
   const enc = exports.encodeCSV(test)
   console.log(enc)
   const dec = exports.decodeCSV(enc)
   console.log(dec)
-  */
 }
+  */
 // console.log(Deno.env.toString())
 //console.log(globalThis)
 // console.log(Deno.Process())

@@ -19,10 +19,10 @@
     <g transform="translate(19)" font-family="&#39;DejaVu Sans&#39;,Verdana,Geneva,sans-serif" font-size="11">
       <path d="M0 0h70.47C71.869 0 73 1.343 73 3v14c0 1.657-1.132 3-2.53 3H0V0z" id="state-bg" fill="url(#workflow-fill)" fill-rule="nonzero"></path>
       <text fill="#010101" fill-opacity=".3">
-        <tspan x="4" y="15">Deno 1.1.5</tspan>
+        <tspan x="4" y="15">Deno 1.1.3</tspan>
       </text>
       <text fill="#FFFFFF">
-        <tspan x="4" y="14">Deno 1.1.5</tspan>
+        <tspan x="4" y="14">Deno 1.1.3</tspan>
       </text>
       <!--
       <text fill="#010101" fill-opacity=".3">

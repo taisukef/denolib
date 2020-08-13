@@ -1,4 +1,4 @@
-import fs from './fs.mjs'
+import fs from './fs.js'
 import iconv from 'https://dev.jspm.io/iconv-lite@0.5.1'
 import cheerio from 'https://dev.jspm.io/cheerio@0.22.0'
 

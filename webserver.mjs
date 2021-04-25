@@ -31,7 +31,9 @@ const CONTENT_TYPE = {
 };
 
 const serveWeb = (req, basedir) => {
-  if (basedir === null) basedir = "docs";
+  if (basedir == null) {
+    basedir = "docs";
+  }
   let url = req.url;
   if (url === "/favicon.ico") {
     req.respond({ body: "" });
@@ -40,7 +42,9 @@ const serveWeb = (req, basedir) => {
   if (url === "/") {
     url = "/index.html";
   }
-  if (basedir.endsWith("/")) basedir = basedir.substring(0, basedir.length - 1);
+  if (basedir.endsWith("/")) {
+    basedir = basedir.substring(0, basedir.length - 1);
+  }
   const n = url.lastIndexOf(".");
   if (url.indexOf("..") === -1 && n >= 0) {
     const ext = url.substring(n + 1);
